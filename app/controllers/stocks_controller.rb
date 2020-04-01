@@ -11,6 +11,19 @@ class StocksController < ApplicationController
   # GET /stocks/1
   # GET /stocks/1.json
   def show
+    @logo = StockQuote::Stock.logo(@stock.ticker)
+    @ticker = StockQuote::Stock.quote(@stock.ticker)
+    args = { q: @ticker.company_name, country: 'IE', mindate: (DateTime.now - 2), max: 1 }
+
+    # Send Request
+    @gnews=Gnews::Query.new('f06b49cef3b8a01a5a37f045261d896a')
+    @responses = @gnews.search(args)
+    @data = JSON.parse(@responses)
+    @article = @data["articles"][0]["title"]
+    @description = @data["articles"][0]["description"]
+    @url = @data["articles"][0]["url"]
+    @image = @data["articles"][0]["image"]    
+
   end
 
   # GET /stocks/new

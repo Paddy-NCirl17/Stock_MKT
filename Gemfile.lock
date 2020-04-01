@@ -40,6 +40,11 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    api_struct (0.1.0)
+      dry-configurable (~> 0.7.0)
+      dry-monads (~> 0.3.1)
+      hashie (~> 3.5, >= 3.5.6)
+      http (>= 2.0.3)
     arel (8.0.0)
     autoprefixer-rails (9.7.5)
       execjs
@@ -65,6 +70,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.2)
       xpath (~> 3.2)
+    chartkick (3.3.1)
     childprocess (3.0.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -85,13 +91,35 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dry-configurable (0.7.0)
+      concurrent-ruby (~> 1.0)
+    dry-core (0.4.9)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.2.2)
+    dry-monads (0.3.1)
+      dry-core
+      dry-equalizer
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2-x86-mingw32)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-search (1.0.3)
+      json
+    hashie (3.6.0)
+    http (4.4.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      http-parser (~> 1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http-parser (1.2.1)
+      ffi-compiler (>= 1.0, < 2.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -107,6 +135,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (1.0.0)
+    metonym (1.0.1)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.1009)
@@ -114,6 +143,9 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     netrc (0.11.0)
+    news_api (0.1.0)
+      api_struct (~> 0.1.0)
+      dry-configurable (~> 0.7.0)
     nio4r (2.5.2)
     nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
@@ -231,10 +263,14 @@ DEPENDENCIES
   bootstrap (~> 4.4, >= 4.4.1)
   byebug
   capybara (>= 2.15)
+  chartkick
   coffee-rails (~> 4.2)
   devise (~> 4.7, >= 4.7.1)
+  google-search
   jbuilder (~> 2.5)
   jquery-rails
+  metonym
+  news_api
   puma (~> 3.7)
   rails (~> 5.1.7)
   sass-rails (~> 5.0)

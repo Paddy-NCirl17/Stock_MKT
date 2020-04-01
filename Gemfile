@@ -36,6 +36,10 @@ gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'jquery-rails'
 gem "stock_quote", '~> 3.0.0'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'news_api'
+gem 'google-search'
+gem 'metonym'
+gem "chartkick"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,7 +52,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem "better_errors"
+  gem "better_errors", require: false
   gem "binding_of_caller"
 end
 

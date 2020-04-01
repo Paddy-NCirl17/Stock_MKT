@@ -1,7 +1,34 @@
 <p>
   <strong>Ticker:</strong>
-  <%= @stock.ticker %>
+  <strong><%= @ticker.company_name%></strong><br/>
+  Ticker Symbol :<%= @ticker.symbol %><br/>
+  Exchange: <%= @ticker.primary_exchange %><br/>
+  Market Cap:    $<%= number_with_precision(@ticker.market_cap, :precision => 2, :delimiter => ',') %><br/>
+  Current Price: $<%= number_with_precision(@ticker.latest_price, :precision => 2, :delimiter => ',') %><br/>
+  Previous Close: $<%= number_with_precision(@ticker.previous_close, :precision => 2, :delimiter => ',') %><br/>
+  Percentage Change: <%= @ticker.change_percent %>%<br/>
+  52 Week high: $<%= number_with_precision(@ticker.week52_high, :precision => 2, :delimiter => ',') %><br/>
+  52 Week Low: $<%= number_with_precision(@ticker.week52_low, :precision => 2, :delimiter => ',') %><br/>
+  YTD Change: <%= @ticker.ytd_change %><br/>
+<img src="<%= @logo.url %>">
+
 </p>
+
+<div class="row">
 
 <%= link_to 'Edit', edit_stock_path(@stock) %> |
 <%= link_to 'Back', stocks_path %>
+<div>
+    <ul>
+    <%= @article%>
+    </ul>
+    <ul>
+   <%= @description %>
+   </ul>
+   <ul>
+   <%= @url %>
+ </ul>
+ <ul>
+   <img src="<%= @image %>">
+  </ul>
+</div>
