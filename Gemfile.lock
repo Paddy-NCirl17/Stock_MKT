@@ -101,10 +101,14 @@ GEM
       dry-equalizer
     erubi (1.9.0)
     execjs (2.7.0)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.12.2-x86-mingw32)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    figaro (1.1.1)
+      thor (~> 0.14)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     google-search (1.0.3)
@@ -120,6 +124,9 @@ GEM
     http-form_data (2.3.0)
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
+    httparty (0.18.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -142,6 +149,8 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
+    multi_xml (0.6.0)
+    multipart-post (2.1.1)
     netrc (0.11.0)
     news_api (0.1.0)
       api_struct (~> 0.1.0)
@@ -226,7 +235,7 @@ GEM
     stock_quote (3.0.0)
       json
       rest-client (~> 2.0.2)
-    thor (1.0.1)
+    thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -240,7 +249,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.6)
+    unf_ext (0.0.7.7-x86-mingw32)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -261,12 +270,16 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap (~> 4.4, >= 4.4.1)
+  bundler (~> 2.1, >= 2.1.4)
   byebug
   capybara (>= 2.15)
   chartkick
   coffee-rails (~> 4.2)
   devise (~> 4.7, >= 4.7.1)
+  faraday
+  figaro (~> 1.1)
   google-search
+  httparty (~> 0.18.0)
   jbuilder (~> 2.5)
   jquery-rails
   metonym

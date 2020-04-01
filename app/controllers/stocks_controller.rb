@@ -13,7 +13,7 @@ class StocksController < ApplicationController
   def show
     @logo = StockQuote::Stock.logo(@stock.ticker)
     @ticker = StockQuote::Stock.quote(@stock.ticker)
-    args = { q: @ticker.company_name, country: 'IE', mindate: (DateTime.now - 2), max: 1 }
+    args = { q: @ticker.company_name, country: 'IE', mindate: (DateTime.now - 2), max: 2 }
 
     # Send Request
     @gnews=Gnews::Query.new('f06b49cef3b8a01a5a37f045261d896a')

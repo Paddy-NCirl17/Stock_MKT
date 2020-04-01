@@ -10,11 +10,12 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :ticker %>
-    <%= form.text_field :ticker, id: :stock_ticker %>
-  </div>
+  <form>
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <%= form.label :ticker, class:"sr-only" %>
+      <%= form.text_field :ticker, id: :stock_ticker, class:"form-control mb-2" %>
+    </div>
 
   <div class="field">
     <% form.label :user_id %>
@@ -22,6 +23,9 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Stock", class:"btn btn-success" %>
   </div>
+</div>
+  </form>
 <% end %>
+
