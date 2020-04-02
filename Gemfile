@@ -40,7 +40,6 @@ gem 'news_api'
 gem 'google-search'
 gem 'metonym'
 gem "chartkick"
-gem 'bundler', '~> 2.1', '>= 2.1.4'
 gem 'faraday'
 gem 'httparty', '~> 0.18.0'
 gem 'figaro', '~> 1.1'
