@@ -81,6 +81,8 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     crass (1.0.6)
     debug_inspector (0.0.3)
     devise (4.7.1)
@@ -113,6 +115,7 @@ GEM
       activesupport (>= 4.2.0)
     google-search (1.0.3)
       json
+    hashdiff (1.0.1)
     hashie (3.6.0)
     http (4.4.1)
       addressable (~> 2.3)
@@ -159,6 +162,7 @@ GEM
     nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.2.3-x86-mingw32)
     popper_js (1.16.0)
     public_suffix (4.0.3)
     puma (3.12.4)
@@ -202,6 +206,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rubyzip (1.3.0)
+    safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -250,6 +255,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7-x86-mingw32)
+    vcr (3.0.1)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -257,6 +263,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webmock (3.8.3)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -284,6 +294,7 @@ DEPENDENCIES
   jquery-rails
   metonym
   news_api
+  pg (~> 1.2, >= 1.2.3)
   puma (~> 3.7)
   rails (~> 5.1.7)
   sass-rails (~> 5.0)
@@ -293,7 +304,9 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  vcr (~> 3.0, >= 3.0.1)
   web-console (>= 3.3.0)
+  webmock (~> 3.8, >= 3.8.3)
 
 BUNDLED WITH
    2.1.4

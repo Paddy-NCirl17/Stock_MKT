@@ -17,6 +17,7 @@ class StocksController < ApplicationController
 
     # Send Request
     @gnews=Gnews::Query.new('f06b49cef3b8a01a5a37f045261d896a')
+    @exchange =StockApiWrapper::Stock.find
     @responses = @gnews.search(args)
     @data = JSON.parse(@responses)
     @article = @data["articles"][0]["title"]

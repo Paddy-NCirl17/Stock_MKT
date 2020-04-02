@@ -14,6 +14,7 @@
       52 Week Low: $<%= number_with_precision(@ticker.week52_low, :precision => 2, :delimiter => ',') %><br/>
       YTD Change: <%= @ticker.ytd_change %><br/>
     </p>
+    <%= @exchange %>
     </div>
     <div class="col-1">
     <img src="<%= @logo.url %>">
