@@ -280,7 +280,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap (~> 4.4, >= 4.4.1)
-  bundler (~> 2.1, >= 2.1.4)
   byebug
   capybara (>= 2.15)
   chartkick
