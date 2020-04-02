@@ -61,7 +61,7 @@ GEM
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
-    byebug (9.0.6)
+    byebug (9.1.0)
     capybara (3.15.1)
       addressable
       mini_mime (>= 0.1.3)
@@ -255,7 +255,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7-x86-mingw32)
-    vcr (3.0.1)
+    vcr (3.0.3)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -308,4 +308,4 @@ DEPENDENCIES
   webmock (~> 3.8, >= 3.8.3)
 
 BUNDLED WITH
-   2.1.4
+   2.1.2
