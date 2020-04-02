@@ -1,3 +1,5 @@
+require 'stock_api_wrapper'
+
 class StocksController < ApplicationController
   before_action :set_stock, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
@@ -14,6 +16,7 @@ class StocksController < ApplicationController
     @logo = StockQuote::Stock.logo(@stock.ticker)
     @ticker = StockQuote::Stock.quote(@stock.ticker)
     args = { q: @ticker.company_name, country: 'IE', mindate: (DateTime.now - 2), max: 2 }
+    @exchange = StockApiWrapper::Stock.find(150)
 
     # Send Request
     @gnews=Gnews::Query.new('f06b49cef3b8a01a5a37f045261d896a')
@@ -22,7 +25,8 @@ class StocksController < ApplicationController
     @article = @data["articles"][0]["title"]
     @description = @data["articles"][0]["description"]
     @url = @data["articles"][0]["url"]
-    @image = @data["articles"][0]["image"]    
+    @image = @data["articles"][0]["image"]
+
 
   end
 
