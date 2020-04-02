@@ -296,4 +296,5 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  config.secret_key = '838c73c675dc61198c096668b71e54efa603b2eff47c9f642adc605155e5437109bfca5c8722826077dd7dc976b0794381d2dfb76243e7b3125edb927490c81a'
 end
