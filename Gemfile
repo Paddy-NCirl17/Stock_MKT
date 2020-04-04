@@ -46,7 +46,7 @@ gem 'figaro', '~> 1.1'
 gem 'vcr', '~> 3.0', '>= 3.0.1'
 gem 'webmock', '~> 3.8', '>= 3.8.3'
 
-gem 'stock_api_wrapper'
+#gem 'stock_api_wrapper'
 group :development, :test do
   gem 'sqlite3', '< 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
