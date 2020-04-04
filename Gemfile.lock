@@ -249,7 +249,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.3)
       tzinfo (>= 1.0.0)
@@ -302,7 +302,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   sqlite3 (< 1.4)
-  stock_api_wrapper (= 0.1.1)
+  stock_api_wrapper
   stock_quote (~> 3.0.0)
   turbolinks (~> 5)
   tzinfo-data
@@ -312,4 +312,4 @@ DEPENDENCIES
   webmock (~> 3.8, >= 3.8.3)
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
