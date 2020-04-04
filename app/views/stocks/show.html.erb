@@ -1,50 +1,58 @@
 <div class ="container">
   <div class="row">
     <div class="col-8">
-    <p>
-      <strong>Ticker:</strong>
-      <strong><%= @ticker.company_name%></strong><br/>
-      Ticker Symbol :<%= @ticker.symbol %><br/>
-      Exchange: <%= @ticker.primary_exchange %><br/>
-      Market Cap:    $<%= number_with_precision(@ticker.market_cap, :precision => 2, :delimiter => ',') %><br/>
-      Current Price: $<%= number_with_precision(@ticker.latest_price, :precision => 2, :delimiter => ',') %><br/>
-      Previous Close: $<%= number_with_precision(@ticker.previous_close, :precision => 2, :delimiter => ',') %><br/>
-      Percentage Change: <%= @ticker.change_percent %>%<br/>
-      52 Week high: $<%= number_with_precision(@ticker.week52_high, :precision => 2, :delimiter => ',') %><br/>
-      52 Week Low: $<%= number_with_precision(@ticker.week52_low, :precision => 2, :delimiter => ',') %><br/>
-      YTD Change: <%= @ticker.ytd_change %><br/>
-    </p>
-    <%=@exchange.data['AED']%>
+      <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Ticker: <%= @ticker.company_name%>
     </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Exchange: <%= @ticker.primary_exchange %></li>
+        <li class="list-group-item">Market Cap:    $<%= number_with_precision(@ticker.market_cap, :precision => 2, :delimiter => ',') %></li>
+        <li class="list-group-item">Current Price: $<%= number_with_precision(@ticker.latest_price, :precision => 2, :delimiter => ',') %></li>
+        <li class="list-group-item">Previous Close: $<%= number_with_precision(@ticker.previous_close, :precision => 2, :delimiter => ',') %></li>
+        <li class="list-group-item">Percentage Change: <%= @ticker.change_percent %>%</li>
+        <li class="list-group-item">  52 Week high: $<%= number_with_precision(@ticker.week52_high, :precision => 2, :delimiter => ',') %></li>
+        <li class="list-group-item">52 Week low: $<%= number_with_precision(@ticker.week52_low, :precision => 2, :delimiter => ',') %></li>
+        <li class="list-group-item">YTD Change: <%= @ticker.ytd_change %></li>
+      </ul>
+    </div>
+    </div>    
     <div class="col-1">
     <img src="<%= @logo.url %>">
   </div>
   </div>
-</div>
+  <br />
+  <h3 class="text-center"><%= @article%></h3>
 
-<div class ="container">
   <div class="row">
-    <div class="col-12">
-      <h3>
-      <%= @article%>
-      </h3>
-        <br/>
+    <div class="col-md-3">
+
+      <img src="<%= @image %>" alt="" class="w-100" />
     </div>
-    <div class="col-1">
-      <center>
-        <img width ="100" heigth ="100" src="<%= @image %>">
-      </center>
-    </div>
-    <div class="col-9">
-      <ul>
-        <%= @description %>
-      </ul>
-      <ul>
-      <a href ="<%= @url %>"><%= @url %></a>
-      </ul>
+    <div class="col-md-9">
+
+      <div class="row align-items-center h-50">
+        <div class="col">
+          <p><h5><%= @description %></h5></p>
+            <a href ="<%= @url %>"><%= @url %></a>
+          </p>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+</div>
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker__item">American Dollar Exchange Rates: </div>
+    <% @exchange.data.each do |x| %>
+    <div class="ticker__item"><%= x.map(&:inspect).join(" :    ").delete('"') %></div>
+    <% end %>
+  </div>
+</div>
+<br /><br /><br />
 <center>
   <%= link_to 'Edit', edit_stock_path(@stock) %> |
         <%= link_to 'Back', stocks_path %>

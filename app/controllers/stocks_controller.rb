@@ -15,7 +15,7 @@ class StocksController < ApplicationController
   def show
     @logo = StockQuote::Stock.logo(@stock.ticker)
     @ticker = StockQuote::Stock.quote(@stock.ticker)
-    args = { q: @ticker.company_name, country: 'IE', mindate: (DateTime.now - 2), max: 2 }
+    args = { q: @ticker.company_name, country: 'IE', mindate: (DateTime.now - 2), max: 1 }
     @exchange = StockApiWrapper::Stock.find(150)
 
     # Send Request

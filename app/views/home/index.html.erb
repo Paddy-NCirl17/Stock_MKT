@@ -1,19 +1,29 @@
-
-<%= form_tag root_path, :method =>'POST' do %>
-	<%= text_field_tag 'ticker', nil, placeholder: " Enter Ticker Symbol", size: 50 %>
-	<%= submit_tag 'Lookup' %>
-<% end %>
-
-
-<% if @stock %>
-	<%= @stock.company_name %><br/>
-	<%= @stock.latest_price %><br/>
-	<%= @stock.symbol %><br/>
-<% elsif @nothing %>
-	<%= @nothing %>	 	
-<% end %>
-
-
+<form>
+<div class = "col-md-6 offset-md-3">
+<div class="jumbotron">
+   <div class="form-row align-items-center">
+      <div class="col-auto">
+         <%= form_tag root_path, :method =>'POST' do %>
+         <div class="field">
+            <%= text_field_tag 'ticker', nil, placeholder: " Enter Ticker Symbol", size: 50 %>
+         </div>
+         <div class="actions">
+            <%= submit_tag 'Lookup', class:"btn btn-success" %>
+            <% end %>
+         </div>
+         <% if @stock %>
+         <%= @stock.company_name %><br/>
+         <%= @stock.latest_price %><br/>
+         <%= @stock.symbol %><br/>
+         <% elsif @nothing %>
+         <%= @nothing %>	 	
+         <% end %>
+      </div>
+   </div>
+</div>
+</div>
+</form>
 <% if @error %>
-	<%= @error %>
-<% end %>	
+<%= @error %>
+<% end %>
+<br/><br/><br/><br/>	
