@@ -45,7 +45,6 @@ gem 'httparty', '~> 0.18.0'
 gem 'figaro', '~> 1.1'
 gem 'vcr', '~> 3.0', '>= 3.0.1'
 gem 'webmock', '~> 3.8', '>= 3.8.3'
-gem 'stock_api_wrapper', "= 0.1.1"
 
 #gem 'stock_api_wrapper', require: true
 group :development, :test do
