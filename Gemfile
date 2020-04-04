@@ -48,6 +48,7 @@ gem 'webmock', '~> 3.8', '>= 3.8.3'
 
 #gem 'stock_api_wrapper'
 group :development, :test do
+  gem 'sqlite3', '< 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 9.0', '>= 9.0.6', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
@@ -64,7 +65,6 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem "better_errors", require: false
   gem "binding_of_caller"
-  gem 'sqlite3','< 1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
