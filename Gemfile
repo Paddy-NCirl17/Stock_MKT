@@ -46,7 +46,7 @@ gem 'figaro', '~> 1.1'
 gem 'vcr', '~> 3.0', '>= 3.0.1'
 gem 'webmock', '~> 3.8', '>= 3.8.3'
 
-#gem 'stock_api_wrapper'
+gem 'stock_api_wrapper'
 group :development, :test do
   gem 'sqlite3', '< 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -62,6 +62,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'sqlite3', '< 1.4'
   gem 'web-console', '>= 3.3.0'
   gem "better_errors", require: false
   gem "binding_of_caller"
