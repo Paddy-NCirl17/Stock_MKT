@@ -58,6 +58,7 @@ end
 
 group :production do
   gem 'pg', '~> 1.2', '>= 1.2.3'
+  gem 'byebug', '~> 9.0', '>= 9.0.6', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
