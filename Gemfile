@@ -41,7 +41,7 @@ gem 'google-search'
 gem 'metonym'
 gem "chartkick"
 gem 'faraday'
-gem 'httparty', '~> 0.18.0'
+gem 'httparty', '~> 0.21.0'
 gem 'figaro', '~> 1.1'
 gem 'vcr', '~> 3.0', '>= 3.0.1'
 gem 'webmock', '~> 3.8', '>= 3.8.3'
