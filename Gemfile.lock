@@ -131,8 +131,8 @@ GEM
     http-form_data (2.3.0)
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
-    httparty (0.18.0)
-      mime-types (~> 3.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
@@ -151,9 +151,9 @@ GEM
       mini_mime (>= 0.1.1)
     method_source (1.0.0)
     metonym (1.0.1)
-    mime-types (3.3.1)
+    mime-types (3.4.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
+    mime-types-data (3.2022.0105)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
@@ -336,7 +336,7 @@ DEPENDENCIES
   faraday
   figaro (~> 1.1)
   google-search
-  httparty (~> 0.18.0)
+  httparty (~> 0.21.0)
   jbuilder (~> 2.5)
   jquery-rails
   metonym
